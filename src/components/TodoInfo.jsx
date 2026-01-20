@@ -6,6 +6,7 @@ const TodoInfo =(props) => {
   } = props
 
   const hasTasks = total > 0
+
   return(
     <div className="todo__info">
       <div className="todo__total-tasks">
