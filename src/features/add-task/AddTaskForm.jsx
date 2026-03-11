@@ -1,9 +1,11 @@
-import Field from '../../shared/ui/Field/Field.jsx'
-import Button from '../../shared/ui/Button/Button.jsx'
+import Field from '@/shared/ui/Field'
+import Button from '@/shared/ui/Button'
 import {useContext, useState} from 'react'
-import { TasksContext } from '../../entities/todo/model/TasksContext.jsx'
+import { TasksContext } from '@/entities/todo'
 
-const AddTaskForm = () => {
+const AddTaskForm = (props) => {
+  const { styles } = props
+
   const {
     addTask,
     newTaskTitle,
@@ -18,6 +20,7 @@ const AddTaskForm = () => {
 
   const onSubmit = (event) => {
     event.preventDefault()
+
     if (!isNewTaskTitleEmpty) {
       addTask(clearNewTaskTitle)
     }
@@ -33,9 +36,9 @@ const AddTaskForm = () => {
   }
 
   return (
-    <form className="todo__form" onSubmit={onSubmit}>
+    <form className={styles.form} onSubmit={onSubmit}>
       <Field
-        className="todo__field"
+        className={styles.field}
         label="New task title"
         id="new-task"
         value={newTaskTitle}

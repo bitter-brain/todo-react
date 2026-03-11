@@ -9,7 +9,6 @@ const useTasksLocalStorage = () => {
     savedTasks: savedTasks ? JSON.parse(savedTasks) : null,
     saveTasks,
   }
-
 }
 
 export default useTasksLocalStorage

@@ -6,7 +6,12 @@ const headers = {
 
 const tasksAPI = {
   getAll: () => {
-    return  fetch(URL).then((response) => response.json())
+    return fetch(URL).then((response) => response.json())
+  },
+
+  getById: (id) => {
+    return fetch(`${URL}/${id}`)
+      .then((response) => response.json())
   },
 
   add: (task) => {
@@ -23,16 +28,16 @@ const tasksAPI = {
   },
 
   deleteAll: (tasks) => {
-    return   Promise.all(
+    return Promise.all(
       tasks.map(({ id }) => tasksAPI.delete(id))
     )
   },
 
   toggleComplete: (id, isDone) => {
-    return fetch(`${URL}/${id}`,{
+    return fetch(`${URL}/${id}`, {
       method: 'PATCH',
       headers,
-      body: JSON.stringify( { isDone })
+      body: JSON.stringify({ isDone })
     })
   },
 }
