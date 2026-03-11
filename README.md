@@ -2,22 +2,27 @@
 
 **Todo App** is a small frontend application built with **React** and **Vite** that allows users to manage tasks efficiently.
 ##
-https://bitter-brain.github.io/todo-react/
+
+https://bitter-brain.github.io/todo/
+
 ---
 
 ## Tech Stack
+
 
 - React 19 (hooks, context, useReducer)  
 - Vite 7  
 - Sass (CSS Modules)  
 - localStorage / json-server  
 - Custom routing (without React Router)  
-- Feature-Sliced Design (FSD)   
+- Feature-Sliced Design (FSD)
+
 
 ---
 
 ## Features
 
+<<<<<<< HEAD
 - Add and delete tasks  
 - Delete all tasks at once (with confirmation)  
 - Mark tasks as completed  
@@ -28,6 +33,7 @@ https://bitter-brain.github.io/todo-react/
 - Data persists in `localStorage`  
 - Two backend modes: `localStorage` or JSON server  
 - Custom router without third-party libraries  
+
 
 ---
 
